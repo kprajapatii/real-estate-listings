@@ -6,9 +6,9 @@
 if ( function_exists( 'register_block_pattern' ) ) {
 
 	register_block_pattern(
-		'real-estate/header-transparent',
+		'real-estate-listings/header-transparent',
 		array(
-			'title'      => esc_html__( 'Header Transparent', 'real-estate' ),
+			'title'      => esc_html__( 'Header Transparent', 'real-estate-listings' ),
 			'categories' => array( 'site-header' ),
 			'content'    => defined( 'BLOCKSTRAP_BLOCKS_VERSION' ) ? apply_filters(
 				'real_estate_pattern_header_transparent',

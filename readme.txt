@@ -1,4 +1,4 @@
-=== Real Estate ===
+=== Real Estate Listings ===
 Contributors: ayecode, stiofansisland
 Tested up to: 6.4
 Requires at least: 6.1
@@ -14,7 +14,7 @@ Real Estate is a unique theme concept, for WordPress.org. With Real Estate Theme
 
 == Changelog ==
 
-= 2.0.0 =
+= 2.0.1 =
 * Initial release
 
 == Copyright ==

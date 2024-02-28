@@ -26,7 +26,7 @@ function directory_enqueue_styles() {
  */
 function real_estate_theme_setup()
 {
-	load_child_theme_textdomain( 'real-estate', get_stylesheet_directory() . '/languages' );
+	load_child_theme_textdomain( 'real-estate-listings', get_stylesheet_directory() . '/languages' );
 }
 add_action('after_setup_theme', 'real_estate_theme_setup');
 

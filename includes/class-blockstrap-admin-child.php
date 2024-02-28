@@ -13,7 +13,7 @@ if ( class_exists( 'BlockStrap_Admin' ) ) {
 		 * @return string|null
 		 */
 		public function get_theme_title() {
-			return __( 'Real Estate', 'real-estate' );
+			return __( 'Real Estate', 'real-estate-listings' );
 		}
 
 		/**
@@ -24,22 +24,22 @@ if ( class_exists( 'BlockStrap_Admin' ) ) {
 //		public function get_demo_pages() {
 //			return array(
 //				'about'   => array(
-//					'title' => __( 'About', 'real-estate' ),
+//					'title' => __( 'About', 'real-estate-listings' ),
 //					'slug'  => 'about',
 //					'desc'  => $this->get_template_content( dirname( __FILE__ ) . '/../patterns/about-page.php' ),
 //				),
 //				'courses' => array(
-//					'title' => __( 'Courses', 'real-estate' ),
+//					'title' => __( 'Courses', 'real-estate-listings' ),
 //					'slug'  => 'courses',
 //					'desc'  => $this->get_template_content( dirname( __FILE__ ) . '/../patterns/courses-page.php' ),
 //				),
 //				'contact' => array(
-//					'title' => __( 'Contact Us', 'real-estate' ),
+//					'title' => __( 'Contact Us', 'real-estate-listings' ),
 //					'slug'  => 'contact',
 //					'desc'  => $this->get_template_content( dirname( __FILE__ ) . '/../patterns/contact-page.php' ),
 //				),
 //				'blog'    => array(
-//					'title'   => __( 'Our Blog', 'real-estate' ),
+//					'title'   => __( 'Our Blog', 'real-estate-listings' ),
 //					'slug'    => 'blog',
 //					'desc'    => $this->get_template_content( dirname( __FILE__ ) . '/../patterns/blog-page.php' ),
 //					'is_blog' => true,
@@ -54,10 +54,10 @@ if ( class_exists( 'BlockStrap_Admin' ) ) {
 		 */
 		public function get_required_plugins() {
 			return array(
-				'blockstrap-page-builder-blocks' => __( 'BlockStrap Builder', 'real-estate' ),
-				'geodirectory' => __( 'GeoDirectory', 'real-estate' ),
-				'userswp' => __( 'UsersWP', 'real-estate' ),
-				// 'real-estate-directory' => __( 'Real Estate Directory', 'real-estate' ), // @todo awaiting approval to repo
+				'blockstrap-page-builder-blocks' => __( 'BlockStrap Builder', 'real-estate-listings' ),
+				'geodirectory' => __( 'GeoDirectory', 'real-estate-listings' ),
+				'userswp' => __( 'UsersWP', 'real-estate-listings' ),
+				// 'real-estate-directory' => __( 'Real Estate Directory', 'real-estate-listings' ), // @todo awaiting approval to repo
 			);
 		}
 
