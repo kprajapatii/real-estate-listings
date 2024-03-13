@@ -9,7 +9,7 @@
  *
  * @return false|string
  */
-function directory_theme_get_default_menu() {
+function real_estate_theme_get_default_menu() {
 	ob_start();
 	?>
     <!-- wp:blockstrap/blockstrap-widget-nav {"anchor":"main-nav","inside_navbar":"1","font_size":"fs-sm","ml_lg":"","rounded_size":"lg","width":"w-100"} -->
@@ -99,4 +99,4 @@ function directory_theme_get_default_menu() {
 
 	return ob_get_clean();
 }
-add_filter( 'directory_pattern_menu_default', 'directory_theme_pattern_menu_default', 15 );
+add_filter( 'directory_pattern_menu_default', 'real_estate_theme_pattern_menu_default', 15 );

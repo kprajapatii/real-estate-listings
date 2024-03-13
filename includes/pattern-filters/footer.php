@@ -8,7 +8,7 @@
  *
  * @return false|string
  */
-function directory_theme_pattern_footer_default( $content ) {
+function real_estate_theme_pattern_footer_default( $content ) {
 	ob_start();
 	?>
     <!-- wp:blockstrap/blockstrap-widget-container {"container":"container-fluid","bg":"custom-color","bg_color":"#1f1b2d","mb_lg":"0","pb_lg":"0","position":"position-relative","anchor":"footer","className":"block-1618467995"} -->
@@ -190,4 +190,4 @@ function directory_theme_pattern_footer_default( $content ) {
 
 	return ob_get_clean();
 }
-add_filter( 'blockstrap_pattern_footer_default', 'directory_theme_pattern_footer_default', 15 );
+add_filter( 'blockstrap_pattern_footer_default', 'real_estate_theme_pattern_footer_default', 15 );

@@ -9,7 +9,7 @@
  *
  * @return string
  */
-function directory_theme_pattern_page_content_archive_default( $content ) {
+function real_estate_theme_pattern_page_content_archive_default( $content ) {
 	ob_start();
 	?>
 	<!-- wp:blockstrap/blockstrap-widget-container -->
@@ -61,10 +61,10 @@ function directory_theme_pattern_page_content_archive_default( $content ) {
 
 	return ob_get_clean();
 }
-add_filter( 'blockstrap_pattern_page_content_archive_default', 'directory_theme_pattern_page_content_archive_default', 15 );
-add_filter( 'blockstrap_pattern_page_content_search_default', 'directory_theme_pattern_page_content_archive_default', 15 );
+add_filter( 'blockstrap_pattern_page_content_archive_default', 'real_estate_theme_pattern_page_content_archive_default', 15 );
+add_filter( 'blockstrap_pattern_page_content_search_default', 'real_estate_theme_pattern_page_content_archive_default', 15 );
 
-function directory_theme_pattern_page_content_post_default( $content ) {
+function real_estate_theme_pattern_page_content_post_default( $content ) {
 	ob_start();
 	?>
     <!-- wp:blockstrap/blockstrap-widget-container {"anchor":"main"} -->
@@ -130,14 +130,14 @@ function directory_theme_pattern_page_content_post_default( $content ) {
 
 	return ob_get_clean();
 }
-add_filter( 'blockstrap_pattern_page_content_post_default', 'directory_theme_pattern_page_content_post_default', 15 );
+add_filter( 'blockstrap_pattern_page_content_post_default', 'real_estate_theme_pattern_page_content_post_default', 15 );
 
 /**
  * @param $content
  *
  * @return false|string
  */
-function directory_theme_pattern_page_content_gd_single_default( $content ) {
+function real_estate_theme_pattern_page_content_gd_single_default( $content ) {
 	$img_map = defined( 'GEODIRECTORY_PLUGIN_URL' ) ? esc_url( GEODIRECTORY_PLUGIN_URL . '/assets/images/block-placeholder-map.png' ) : ''; /* <?php echo esc_url( $img_map ); ?> */
 	ob_start();
 	?>
@@ -369,7 +369,7 @@ function directory_theme_pattern_page_content_gd_single_default( $content ) {
 
 	return ob_get_clean();
 }
-add_filter( 'blockstrap_pattern_page_content_gd_single_default', 'directory_theme_pattern_page_content_gd_single_default', 15 );
+add_filter( 'blockstrap_pattern_page_content_gd_single_default', 'real_estate_theme_pattern_page_content_gd_single_default', 15 );
 
 
 /**
@@ -377,7 +377,7 @@ add_filter( 'blockstrap_pattern_page_content_gd_single_default', 'directory_them
  *
  * @return false|string
  */
-function directory_theme_pattern_page_content_gd_archive_default( $content ) {
+function real_estate_theme_pattern_page_content_gd_archive_default( $content ) {
 	$img_map = defined( 'GEODIRECTORY_PLUGIN_URL' ) ? esc_url( GEODIRECTORY_PLUGIN_URL . '/assets/images/block-placeholder-map.png' ) : ''; /* <?php echo esc_url( $img_map ); ?> */
 	ob_start();
 	?>
@@ -432,8 +432,8 @@ function directory_theme_pattern_page_content_gd_archive_default( $content ) {
 
 	return ob_get_clean();
 }
-add_filter( 'blockstrap_pattern_page_content_gd_archive_default', 'directory_theme_pattern_page_content_gd_archive_default', 15 );
-add_filter( 'blockstrap_pattern_page_content_gd_search_default', 'directory_theme_pattern_page_content_gd_archive_default', 15 );
+add_filter( 'blockstrap_pattern_page_content_gd_archive_default', 'real_estate_theme_pattern_page_content_gd_archive_default', 15 );
+add_filter( 'blockstrap_pattern_page_content_gd_search_default', 'real_estate_theme_pattern_page_content_gd_archive_default', 15 );
 
 
 /**
@@ -443,7 +443,7 @@ add_filter( 'blockstrap_pattern_page_content_gd_search_default', 'directory_them
  *
  * @return false|string
  */
-function directory_theme_pattern_part_main_default( $content ) {
+function real_estate_theme_pattern_part_main_default( $content ) {
 	ob_start();
 	?>
 	<!-- wp:query {"queryId":1,"query":{"pages":"100","offset":"0","postType":"post","order":"desc","orderBy":"date","author":"","search":"","sticky":"","exclude":[],"perPage":"6","inherit":true,"taxQuery":{"category":[]}},"displayLayout":{"type":"flex","columns":3}} -->
@@ -499,9 +499,9 @@ function directory_theme_pattern_part_main_default( $content ) {
 
 	return ob_get_clean();
 }
-add_filter( 'blockstrap_pattern_part_main_default', 'directory_theme_pattern_part_main_default', 15 );
+add_filter( 'blockstrap_pattern_part_main_default', 'real_estate_theme_pattern_part_main_default', 15 );
 
-function directory_theme_pattern_page_content_page_default( $content ) {
+function real_estate_theme_pattern_page_content_page_default( $content ) {
 	ob_start();
 	?>
 	<!-- wp:blockstrap/blockstrap-widget-container {"anchor":"main"} -->
@@ -535,7 +535,7 @@ function directory_theme_pattern_page_content_page_default( $content ) {
 
 	return ob_get_clean();
 }
-add_filter( 'blockstrap_pattern_page_content_page_default', 'directory_theme_pattern_page_content_page_default', 15 );
+add_filter( 'blockstrap_pattern_page_content_page_default', 'real_estate_theme_pattern_page_content_page_default', 15 );
 
 /**
  * Replaces the default page with right sidebar content in the BlockStrap theme.
@@ -544,7 +544,7 @@ add_filter( 'blockstrap_pattern_page_content_page_default', 'directory_theme_pat
  *
  * @return string
  */
-function directory_theme_pattern_page_content_page_sidebar_right_default( $content ) {
+function real_estate_theme_pattern_page_content_page_sidebar_right_default( $content ) {
 	ob_start();
 	?>
    <!-- wp:blockstrap/blockstrap-widget-container {"anchor":"main"} -->
@@ -578,7 +578,7 @@ function directory_theme_pattern_page_content_page_sidebar_right_default( $conte
 
 	return ob_get_clean();
 }
-add_filter( 'blockstrap_pattern_page_content_page_sidebar_right_default', 'directory_theme_pattern_page_content_page_sidebar_right_default', 15 );
+add_filter( 'blockstrap_pattern_page_content_page_sidebar_right_default', 'real_estate_theme_pattern_page_content_page_sidebar_right_default', 15 );
 
 
 /**
@@ -588,7 +588,7 @@ add_filter( 'blockstrap_pattern_page_content_page_sidebar_right_default', 'direc
  *
  * @return string
  */
-function directory_theme_pattern_page_content_page_sidebar_left_default( $content ) {
+function real_estate_theme_pattern_page_content_page_sidebar_left_default( $content ) {
 	ob_start();
 	?>
 	<!-- wp:blockstrap/blockstrap-widget-container {"anchor":"main"} -->
@@ -622,7 +622,7 @@ function directory_theme_pattern_page_content_page_sidebar_left_default( $conten
 
 	return ob_get_clean();
 }
-add_filter( 'blockstrap_pattern_page_content_page_sidebar_left_default', 'directory_theme_pattern_page_content_page_sidebar_left_default', 15 );
+add_filter( 'blockstrap_pattern_page_content_page_sidebar_left_default', 'real_estate_theme_pattern_page_content_page_sidebar_left_default', 15 );
 
 
 /**
@@ -632,7 +632,7 @@ add_filter( 'blockstrap_pattern_page_content_page_sidebar_left_default', 'direct
  *
  * @return string
  */
-function directory_theme_pattern_page_content_404_default( $content ) {
+function real_estate_theme_pattern_page_content_404_default( $content ) {
 	ob_start();
 	?>
 	<!-- wp:blockstrap/blockstrap-widget-container {"text_align_lg":"text-lg-center","anchor":"main"} -->
@@ -656,7 +656,7 @@ function directory_theme_pattern_page_content_404_default( $content ) {
 
 	return ob_get_clean();
 }
-add_filter( 'blockstrap_pattern_page_content_404_default', 'directory_theme_pattern_page_content_404_default', 15 );
+add_filter( 'blockstrap_pattern_page_content_404_default', 'real_estate_theme_pattern_page_content_404_default', 15 );
 
 /**
  * Replaces the default GD add listing page content in the BlockStrap theme.
@@ -665,7 +665,7 @@ add_filter( 'blockstrap_pattern_page_content_404_default', 'directory_theme_patt
  *
  * @return string
  */
-function directory_theme_pattern_page_content_gd_add_listing_default( $content ) {
+function real_estate_theme_pattern_page_content_gd_add_listing_default( $content ) {
 	ob_start();
 	?>
 	<!-- wp:template-part {"slug":"hero-page","theme":"real-estate-listings","area":"uncategorized"} /-->
@@ -683,7 +683,7 @@ function directory_theme_pattern_page_content_gd_add_listing_default( $content )
 
 	return ob_get_clean();
 }
-add_filter( 'blockstrap_pattern_page_content_gd_add_listing_default', 'directory_theme_pattern_page_content_gd_add_listing_default', 15 );
+add_filter( 'blockstrap_pattern_page_content_gd_add_listing_default', 'real_estate_theme_pattern_page_content_gd_add_listing_default', 15 );
 
 /**
  * Replaces the default GD location page content in the BlockStrap theme.
@@ -692,22 +692,22 @@ add_filter( 'blockstrap_pattern_page_content_gd_add_listing_default', 'directory
  *
  * @return string
  */
-function directory_theme_pattern_page_content_gd_location_default( $content ) {
+function real_estate_theme_pattern_page_content_gd_location_default( $content ) {
 	ob_start();
 
-	echo directory_theme_pattern_hero_home_default( $content ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-	echo directory_theme_pattern_feature_home_default( $content ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo real_estate_theme_pattern_hero_home_default( $content ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo real_estate_theme_pattern_feature_home_default( $content ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 	return ob_get_clean();
 }
-add_filter( 'blockstrap_pattern_page_content_gd_location_default', 'directory_theme_pattern_page_content_gd_location_default', 15 );
+add_filter( 'blockstrap_pattern_page_content_gd_location_default', 'real_estate_theme_pattern_page_content_gd_location_default', 15 );
 
 /**
  * @param $content
  *
  * @return false|string
  */
-function directory_theme_pattern_feature_home_default( $content ) {
+function real_estate_theme_pattern_feature_home_default( $content ) {
 	ob_start();
 	$img_map          = defined( 'GEODIRECTORY_PLUGIN_URL' ) ? esc_url( GEODIRECTORY_PLUGIN_URL . '/assets/images/block-placeholder-map.png' ) : ''; /* <?php echo esc_url( $img_map ); ?> */
 	$img_testimonials = esc_url( get_stylesheet_directory_uri() . '/assets/images/testimonials.jpg' ); /* <?php echo esc_url( $img_testimonials ); ?> */
@@ -1005,4 +1005,4 @@ function directory_theme_pattern_feature_home_default( $content ) {
 
 	return ob_get_clean();
 }
-add_filter( 'blockstrap_pattern_feature_home_default', 'directory_theme_pattern_feature_home_default', 15 );
+add_filter( 'blockstrap_pattern_feature_home_default', 'real_estate_theme_pattern_feature_home_default', 15 );

@@ -1,9 +1,9 @@
 === Real Estate Listings ===
 Contributors: ayecode, stiofansisland
-Tested up to: 6.4
+Tested up to: 6.5
 Requires at least: 6.1
 Requires PHP: 7.2
-Version: 2.0.3
+Version: 2.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,8 +14,8 @@ Real Estate is a unique theme concept, for WordPress.org. With Real Estate Theme
 
 == Changelog ==
 
-= 2.0.3 =
-* Version bump to release on our own website until released on wp.org
+= 2.0.4 =
+* All functions prefixed with theme prefix and not parent/child prefixes - CHANGED
 
 = 2.0.2 =
 * Initial release

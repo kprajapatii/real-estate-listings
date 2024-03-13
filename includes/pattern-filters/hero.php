@@ -11,7 +11,7 @@
  *
  * @return string
  */
-function directory_theme_pattern_hero_archive_default( $content ) {
+function real_estate_theme_pattern_hero_archive_default( $content ) {
 	ob_start();
 	?>
 	<!-- wp:blockstrap/blockstrap-widget-container {"bg_gradient":"linear-gradient(135deg,rgb(2,11,185) 2%,rgb(126,5,170) 100%)","mt_lg":"5","mb_lg":"","pt_lg":"5","position":"position-relative"} -->
@@ -31,14 +31,14 @@ function directory_theme_pattern_hero_archive_default( $content ) {
 
 	return ob_get_clean();
 }
-add_filter( 'blockstrap_pattern_hero_archive_default', 'directory_theme_pattern_hero_archive_default', 15 );
+add_filter( 'blockstrap_pattern_hero_archive_default', 'real_estate_theme_pattern_hero_archive_default', 15 );
 
 /**
  * @param $content
  *
  * @return false|string
  */
-function directory_theme_pattern_hero_post_default( $content ) {
+function real_estate_theme_pattern_hero_post_default( $content ) {
 	ob_start();
 	?>
 	<!-- wp:blockstrap/blockstrap-widget-container {"bg_color":"#0d1b48","text_color":"dark","mt_lg":"5","mb_lg":"4","pt_lg":"5","rounded":"rounded","rounded_size":"lg","position":"position-relative","className":"mw-50 "} -->
@@ -94,9 +94,9 @@ function directory_theme_pattern_hero_post_default( $content ) {
 
 	return ob_get_clean();
 }
-add_filter( 'blockstrap_pattern_hero_post_default', 'directory_theme_pattern_hero_post_default', 15 );
+add_filter( 'blockstrap_pattern_hero_post_default', 'real_estate_theme_pattern_hero_post_default', 15 );
 
-function directory_theme_pattern_hero_page_default( $content ) {
+function real_estate_theme_pattern_hero_page_default( $content ) {
 	ob_start();
 	?>
 	<!-- wp:blockstrap/blockstrap-widget-container {"bg_color":"#0d1b48","text_color":"dark","mt_lg":"9","mb_lg":"4","rounded":"rounded","rounded_size":"lg","position":"position-relative","className":"mw-50 "} -->
@@ -122,7 +122,7 @@ function directory_theme_pattern_hero_page_default( $content ) {
 
 	return ob_get_clean();
 }
-add_filter( 'blockstrap_pattern_hero_page_default', 'directory_theme_pattern_hero_page_default', 15 );
+add_filter( 'blockstrap_pattern_hero_page_default', 'real_estate_theme_pattern_hero_page_default', 15 );
 
 /**
  * Replaces the default 404 page hero section content in the BlockStrap theme.
@@ -131,7 +131,7 @@ add_filter( 'blockstrap_pattern_hero_page_default', 'directory_theme_pattern_her
  *
  * @return string
  */
-function directory_theme_pattern_hero_404_default( $content ) {
+function real_estate_theme_pattern_hero_404_default( $content ) {
 	ob_start();
 	?>
 	<!-- wp:blockstrap/blockstrap-widget-container {"bg_gradient":"linear-gradient(135deg,rgb(2,11,185) 2%,rgb(126,5,170) 100%)","mt_lg":"7","mb_lg":"","position":"position-relative"} -->
@@ -151,7 +151,7 @@ function directory_theme_pattern_hero_404_default( $content ) {
 
 	return ob_get_clean();
 }
-add_filter( 'blockstrap_pattern_hero_404_default', 'directory_theme_pattern_hero_404_default', 15 );
+add_filter( 'blockstrap_pattern_hero_404_default', 'real_estate_theme_pattern_hero_404_default', 15 );
 
 /**
  * Replaces the default homepage hero section content in the BlockStrap theme.
@@ -160,7 +160,7 @@ add_filter( 'blockstrap_pattern_hero_404_default', 'directory_theme_pattern_hero
  *
  * @return string
  */
-function directory_theme_pattern_hero_home_default( $content ) {
+function real_estate_theme_pattern_hero_home_default( $content ) {
 	$img_url = esc_url( get_stylesheet_directory_uri() . '/assets/images/home-bg.jpg' ); /* <?php echo esc_url( $img_url ); ?> */
 	ob_start();
 	?>
@@ -183,4 +183,4 @@ function directory_theme_pattern_hero_home_default( $content ) {
 
 	return ob_get_clean();
 }
-add_filter( 'blockstrap_pattern_hero_home_default', 'directory_theme_pattern_hero_home_default', 15 );
+add_filter( 'blockstrap_pattern_hero_home_default', 'real_estate_theme_pattern_hero_home_default', 15 );
