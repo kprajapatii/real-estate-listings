@@ -13,12 +13,6 @@ require_once 'includes/pattern-filters/content.php';
 require_once 'includes/register-patterns.php';
 
 
-add_action( 'wp_enqueue_scripts', 'real_estate_theme_enqueue_styles' );
-function real_estate_theme_enqueue_styles() {
-	 wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-}
-
-
 /**
  * Loads the translation files for WordPress.
  *

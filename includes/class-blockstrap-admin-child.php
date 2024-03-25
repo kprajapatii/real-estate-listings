@@ -17,37 +17,6 @@ if ( class_exists( 'BlockStrap_Admin' ) ) {
 		}
 
 		/**
-		 * Get the array of demo pages.
-		 *
-		 * @return array[]
-		 */
-//		public function get_demo_pages() {
-//			return array(
-//				'about'   => array(
-//					'title' => __( 'About', 'real-estate-listings' ),
-//					'slug'  => 'about',
-//					'desc'  => $this->get_template_content( dirname( __FILE__ ) . '/../patterns/about-page.php' ),
-//				),
-//				'courses' => array(
-//					'title' => __( 'Courses', 'real-estate-listings' ),
-//					'slug'  => 'courses',
-//					'desc'  => $this->get_template_content( dirname( __FILE__ ) . '/../patterns/courses-page.php' ),
-//				),
-//				'contact' => array(
-//					'title' => __( 'Contact Us', 'real-estate-listings' ),
-//					'slug'  => 'contact',
-//					'desc'  => $this->get_template_content( dirname( __FILE__ ) . '/../patterns/contact-page.php' ),
-//				),
-//				'blog'    => array(
-//					'title'   => __( 'Our Blog', 'real-estate-listings' ),
-//					'slug'    => 'blog',
-//					'desc'    => $this->get_template_content( dirname( __FILE__ ) . '/../patterns/blog-page.php' ),
-//					'is_blog' => true,
-//				),
-//			);
-//		}
-
-		/**
 		 * Get the required plugins details array.
 		 *
 		 * @return array
@@ -57,7 +26,6 @@ if ( class_exists( 'BlockStrap_Admin' ) ) {
 				'blockstrap-page-builder-blocks' => __( 'BlockStrap Builder', 'real-estate-listings' ),
 				'geodirectory' => __( 'GeoDirectory', 'real-estate-listings' ),
 				'userswp' => __( 'UsersWP', 'real-estate-listings' ),
-				// 'real-estate-directory' => __( 'Real Estate Directory', 'real-estate-listings' ), // @todo awaiting approval to repo
 			);
 		}
 
