@@ -45,7 +45,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 				''
 			) : '<!-- wp:group {"tagName":"main"} -->
 <main class="wp-block-group has-background"><!-- wp:paragraph -->
-<p>' . __( 'Real Estate Listings is a lightweight and minimalist WordPress theme that was built specifically to work seamlessly with the plugins: BlockStrap page builder and GeoDirectory.', 'real-estate-listings' ) . '</p>
+<p>' . esc_attr__( 'Real Estate Listings is a lightweight and minimalist WordPress theme that was built specifically to work seamlessly with the plugins: BlockStrap page builder and GeoDirectory.', 'real-estate-listings' ) . '</p>
 <!-- /wp:paragraph --></main>
 <!-- /wp:group -->',
 		)

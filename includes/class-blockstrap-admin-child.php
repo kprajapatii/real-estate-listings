@@ -23,9 +23,9 @@ if ( class_exists( 'BlockStrap_Admin' ) ) {
 		 */
 		public function get_required_plugins() {
 			return array(
-				'blockstrap-page-builder-blocks' => __( 'BlockStrap Builder', 'real-estate-listings' ),
-				'geodirectory' => __( 'GeoDirectory', 'real-estate-listings' ),
-				'userswp' => __( 'UsersWP', 'real-estate-listings' ),
+				'blockstrap-page-builder-blocks' => esc_attr__( 'BlockStrap Builder', 'real-estate-listings' ),
+				'geodirectory' => esc_attr__( 'GeoDirectory', 'real-estate-listings' ),
+				'userswp' => esc_attr__( 'UsersWP', 'real-estate-listings' ),
 			);
 		}
 
