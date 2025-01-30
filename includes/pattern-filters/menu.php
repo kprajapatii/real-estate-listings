@@ -11,102 +11,33 @@
  */
 function real_estate_theme_get_default_menu() {
 	ob_start();
-
-	/*
-	<?php esc_attr_e('Set Location','real-estate-listings'); ?>
-	<?php esc_attr_e('Sign in','real-estate-listings'); ?>
-	<?php esc_attr_e('estate','real-estate-listings'); ?>
-	<?php esc_attr_e('Sign out','real-estate-listings'); ?>
-	<?php esc_attr_e('Add listing','real-estate-listings'); ?>
-	<?php esc_attr_e('Blog','real-estate-listings'); ?>
-
-	*/
 	?>
-    <!-- wp:blockstrap/blockstrap-widget-nav {"anchor":"main-nav","inside_navbar":"1","font_size":"fs-sm","ml_lg":"","rounded_size":"lg","width":"w-100"} -->
-    [bs_nav anchor='main-nav'  inside_navbar='1'  container=''  flex_direction=''  nav_style=''  flex_justify_content=''  flex_justify_content_md=''  flex_justify_content_lg=''  nav_fill=''  font_size='fs-sm'  font_size_custom=''  bg=''  mt=''  mr='auto'  mb=''  ml='auto'  mt_md=''  mr_md=''  mb_md=''  ml_md=''  mt_lg=''  mr_lg='0'  mb_lg=''  ml_lg=''  pt=''  pr=''  pb=''  pl=''  pt_md=''  pr_md=''  pb_md=''  pl_md=''  pt_lg=''  pr_lg=''  pb_lg=''  pl_lg=''  border=''  rounded=''  rounded_size='lg'  shadow=''  width='w-100'  css_class='' ]<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav_main-nav" aria-label="Open menu"><span class="navbar-toggler-icon"></span></button><div class="wp-block-blockstrap-blockstrap-widget-nav blockstrap-nav collapse navbar-collapse" id="navbarNav_main-nav"><ul class="wp-block-blockstrap-blockstrap-widget-nav navbar-nav me-auto ms-auto me-lg-0 rounded-lg w-100 fs-sm">
-			<?php
-			// Location switcher if location manager installed
-			if ( defined( 'GEODIRLOCATION_VERSION' ) ) {
-				?>
-			<!-- wp:blockstrap/blockstrap-widget-nav-item {"type":"gd_location_switcher","page_id":"70","custom_url":"#about","text":"<?php esc_attr_e('Set Location','real-estate-listings'); ?>","icon_class":"fas fa-map-marker-alt fa-lg text-primary","link_divider":"right","ml":"0","ml_md":"0","mr_lg":"2","pr_lg":"2","content":"\u003ca href=\u0022##location-switcher\u0022 class=\u0022nav-link \u0022\u003e\u003ci class=\u0022fas fa-map-marker-alt fa-lg text-primary me-2\u0022\u003e\u003c/i\u003e<?php esc_attr_e('Set Location','real-estate-listings'); ?>\u003cspan class=\u0022navbar-divider d-none d-lg-block position-absolute top-50 end-0 translate-middle-y\u0022\u003e\u003c/span\u003e\u003c/a\u003e"} -->
-			[bs_nav_item type='gd_location_switcher'  page_id='70'  post_id=''  custom_url='#about'  text='<?php esc_attr_e('Set Location','real-estate-listings'); ?>'  icon_class='fas fa-map-marker-alt fa-lg text-primary'  icon_aria_label=''  link_type=''  link_size=''  link_bg=''  link_pt=''  link_pr=''  link_pb=''  link_pl=''  link_pt_md=''  link_pr_md=''  link_pb_md=''  link_pl_md=''  link_pt_lg=''  link_pr_lg=''  link_pb_lg=''  link_pl_lg=''  link_divider='right'  text_color=''  text_justify='false'  text_align=''  text_align_md=''  text_align_lg=''  font_weight=''  mt=''  mr=''  mb=''  ml='0'  mt_md=''  mr_md=''  mb_md=''  ml_md='0'  mt_lg=''  mr_lg='2'  mb_lg=''  ml_lg=''  pt=''  pr=''  pb=''  pl=''  pt_md=''  pr_md=''  pb_md=''  pl_md=''  pt_lg=''  pr_lg='2'  pb_lg=''  pl_lg=''  border=''  rounded=''  rounded_size=''  shadow=''  visibility_conditions=''  css_class='' ]
-			<!-- /wp:blockstrap/blockstrap-widget-nav-item -->
-				<?php
-			}
+	<!-- wp:blockstrap/blockstrap-widget-nav {"anchor":"main-nav","font_size":"fs-sm","ml_lg":"","rounded_size":"lg","width":"w-100","sd_shortcode":"[bs_nav anchor='main-nav'  inside_navbar='1'  container=''  flex_direction=''  nav_style=''  flex_justify_content=''  flex_justify_content_md=''  flex_justify_content_lg=''  nav_fill=''  font_size='fs-sm'  font_size_custom=''  bg=''  mt=''  mr='auto'  mb=''  ml='auto'  mt_md=''  mr_md=''  mb_md=''  ml_md=''  mt_lg=''  mr_lg='0'  mb_lg=''  ml_lg=''  pt=''  pr=''  pb=''  pl=''  pt_md=''  pr_md=''  pb_md=''  pl_md=''  pt_lg=''  pr_lg=''  pb_lg=''  pl_lg=''  border=''  rounded=''  rounded_size='lg'  shadow=''  width='w-100'  css_class='' ]","sd_shortcode_close":"[/bs_nav]"} -->
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav_main-nav" aria-label="Open menu"><span class="navbar-toggler-icon"></span></button><div class="wp-block-blockstrap-blockstrap-widget-nav blockstrap-nav collapse navbar-collapse" id="navbarNav_main-nav"><ul class="wp-block-blockstrap-blockstrap-widget-nav navbar-nav me-auto ms-auto me-lg-0 rounded-lg w-100 fs-sm">
 
-			// CPTs
-			if ( defined( 'GEODIRECTORY_VERSION' ) ) {
-				$post_types = geodir_get_posttypes( 'array' );
+			<!-- wp:pattern {"slug":"real-estate-listings/main-menu-items"} /-->
 
-				foreach ( $post_types as $pt => $cpt ) {
-
-					if ( $cpt['public'] ) {
-						$name = ! empty( $cpt['labels']['name'] ) ? esc_attr( $cpt['labels']['name'] ) : esc_attr( $pt );
-						?>
-						<!-- wp:blockstrap/blockstrap-widget-nav-item {"type":"<?php echo esc_attr( $pt ); ?>","custom_url":"","text":"<?php echo esc_attr( $name ); ?>","content":""} -->
-						[bs_nav_item type='<?php echo esc_attr( $pt ); ?>'  page_id=''  post_id=''  custom_url=''  text='<?php echo esc_attr( $name ); ?>'  icon_class=''  icon_aria_label=''  link_type=''  link_size=''  link_bg=''  link_pt=''  link_pr=''  link_pb=''  link_pl=''  link_pt_md=''  link_pr_md=''  link_pb_md=''  link_pl_md=''  link_pt_lg=''  link_pr_lg=''  link_pb_lg=''  link_pl_lg=''  link_divider=''  text_color=''  text_justify='false'  text_align=''  text_align_md=''  text_align_lg=''  font_weight=''  mt=''  mr=''  mb=''  ml=''  mt_md=''  mr_md=''  mb_md=''  ml_md=''  mt_lg=''  mr_lg=''  mb_lg=''  ml_lg=''  pt=''  pr=''  pb=''  pl=''  pt_md=''  pr_md=''  pb_md=''  pl_md=''  pt_lg=''  pr_lg=''  pb_lg=''  pl_lg=''  border=''  rounded=''  rounded_size=''  shadow=''  visibility_conditions=''  css_class='' ]
-						<!-- /wp:blockstrap/blockstrap-widget-nav-item -->
-						<?php
-					}
-				}
-			}
-
-			// Blog page
-
-			if ( 'page' === get_option( 'show_on_front' ) ) {
-				$blog_page_id = get_option( 'page_for_posts' );
-				if ( $blog_page_id ) {
-					?>
-				<!-- wp:blockstrap/blockstrap-widget-nav-item {"type":"page","page_id":"<?php echo absint( $blog_page_id ); ?>","text":"<?php esc_attr_e('Blog','real-estate-listings'); ?>","content":""} -->
-				[bs_nav_item type='page'  page_id='<?php echo absint( $blog_page_id ); ?>'  post_id=''  custom_url=''  text='<?php esc_attr_e('Blog','real-estate-listings'); ?>'  icon_class=''  icon_aria_label=''  link_type=''  link_size=''  link_bg=''  link_pt=''  link_pr=''  link_pb=''  link_pl=''  link_pt_md=''  link_pr_md=''  link_pb_md=''  link_pl_md=''  link_pt_lg=''  link_pr_lg=''  link_pb_lg=''  link_pl_lg=''  link_divider=''  text_color=''  text_justify='false'  text_align=''  text_align_md=''  text_align_lg=''  font_weight=''  mt=''  mr=''  mb=''  ml=''  mt_md=''  mr_md=''  mb_md=''  ml_md=''  mt_lg=''  mr_lg=''  mb_lg=''  ml_lg=''  pt=''  pr=''  pb=''  pl=''  pt_md=''  pr_md=''  pb_md=''  pl_md=''  pt_lg=''  pr_lg=''  pb_lg=''  pl_lg=''  border=''  rounded=''  rounded_size=''  shadow=''  visibility_conditions=''  css_class='' ]
-				<!-- /wp:blockstrap/blockstrap-widget-nav-item -->
-					<?php
-				}
-			}
-
-			// spacer
-			?>
-			<!-- wp:blockstrap/blockstrap-widget-nav-item {"type":"spacer","text":" ","icon_class":" ","link_bg":"outline-light","mt_lg":"0","mb_lg":"0","ml_lg":"auto","pt_lg":"0","pr_lg":"0","pb_lg":"0","pl_lg":"0","content":"\u003cli class=\u0022nav-item mt-0 mb-0 ms-auto pt-0 pe-0 pb-0 ps-0\u0022\u003e\u003c/li\u003e"} -->
-			[bs_nav_item type='spacer'  page_id=''  post_id=''  custom_url=''  text=' '  icon_class=' '  icon_aria_label=''  link_type=''  link_size=''  link_bg='outline-light'  link_pt=''  link_pr=''  link_pb=''  link_pl=''  link_pt_md=''  link_pr_md=''  link_pb_md=''  link_pl_md=''  link_pt_lg=''  link_pr_lg=''  link_pb_lg=''  link_pl_lg=''  link_divider=''  text_color=''  text_justify='false'  text_align=''  text_align_md=''  text_align_lg=''  font_weight=''  mt=''  mr=''  mb=''  ml=''  mt_md=''  mr_md=''  mb_md=''  ml_md=''  mt_lg='0'  mr_lg=''  mb_lg='0'  ml_lg='auto'  pt=''  pr=''  pb=''  pl=''  pt_md=''  pr_md=''  pb_md=''  pl_md=''  pt_lg='0'  pr_lg='0'  pb_lg='0'  pl_lg='0'  border=''  rounded=''  rounded_size=''  shadow=''  visibility_conditions=''  css_class='' ]
-			<!-- /wp:blockstrap/blockstrap-widget-nav-item -->
-			<?php
-
-			if ( defined( 'USERSWP_VERSION' ) ) {
-				// Sign in/out with UWP
-				?>
-				<!-- wp:blockstrap/blockstrap-widget-nav-item {"type":"uwp_login","text":"<?php esc_attr_e('Sign in','real-estate-listings'); ?>","icon_class":"far fa-user","link_bg":"outline-light","mt_lg":"0","mb_lg":"0","pt_lg":"0","pr_lg":"0","pb_lg":"0","pl_lg":"0","content":""} -->
-				[bs_nav_item type='uwp_login'  page_id=''  post_id=''  custom_url=''  text='<?php esc_attr_e('Sign in','real-estate-listings'); ?>'  icon_class='far fa-user'  icon_aria_label=''  link_type=''  link_size=''  link_bg='outline-light'  link_pt=''  link_pr=''  link_pb=''  link_pl=''  link_pt_md=''  link_pr_md=''  link_pb_md=''  link_pl_md=''  link_pt_lg=''  link_pr_lg=''  link_pb_lg=''  link_pl_lg=''  link_divider=''  text_color=''  text_justify='false'  text_align=''  text_align_md=''  text_align_lg=''  font_weight=''  mt=''  mr=''  mb=''  ml=''  mt_md=''  mr_md=''  mb_md=''  ml_md=''  mt_lg='0'  mr_lg=''  mb_lg='0'  ml_lg=''  pt=''  pr=''  pb=''  pl=''  pt_md=''  pr_md=''  pb_md=''  pl_md=''  pt_lg='0'  pr_lg='0'  pb_lg='0'  pl_lg='0'  border=''  rounded=''  rounded_size=''  shadow=''  visibility_conditions=''  css_class='' ]
-				<!-- /wp:blockstrap/blockstrap-widget-nav-item -->
-
-				<!-- wp:blockstrap/blockstrap-widget-nav-item {"type":"uwp_logout","text":"<?php esc_attr_e('Sign out','real-estate-listings'); ?>","icon_class":"fas fa-sign-out-alt","link_bg":"outline-light","mt_lg":"0","mb_lg":"0","pt_lg":"0","pr_lg":"0","pb_lg":"0","pl_lg":"0","content":""} -->
-				[bs_nav_item type='uwp_logout'  page_id=''  post_id=''  custom_url=''  text='<?php esc_attr_e('Sign out','real-estate-listings'); ?>'  icon_class='fas fa-sign-out-alt'  icon_aria_label=''  link_type=''  link_size=''  link_bg='outline-light'  link_pt=''  link_pr=''  link_pb=''  link_pl=''  link_pt_md=''  link_pr_md=''  link_pb_md=''  link_pl_md=''  link_pt_lg=''  link_pr_lg=''  link_pb_lg=''  link_pl_lg=''  link_divider=''  text_color=''  text_justify='false'  text_align=''  text_align_md=''  text_align_lg=''  font_weight=''  mt=''  mr=''  mb=''  ml=''  mt_md=''  mr_md=''  mb_md=''  ml_md=''  mt_lg='0'  mr_lg=''  mb_lg='0'  ml_lg=''  pt=''  pr=''  pb=''  pl=''  pt_md=''  pr_md=''  pb_md=''  pl_md=''  pt_lg='0'  pr_lg='0'  pb_lg='0'  pl_lg='0'  border=''  rounded=''  rounded_size=''  shadow=''  visibility_conditions=''  css_class='' ]
-				<!-- /wp:blockstrap/blockstrap-widget-nav-item -->
-				<?php
-			} else {
-				// Signin/out without UWP
-				?>
-				<!-- wp:blockstrap/blockstrap-widget-nav-item {"type":"wp-login","text":"<?php esc_attr_e('Sign in','real-estate-listings'); ?>","icon_class":"far fa-user","link_bg":"outline-light","mt_lg":"0","mb_lg":"0","pt_lg":"0","pr_lg":"0","pb_lg":"0","pl_lg":"0","content":""} -->
-				[bs_nav_item type='wp-login'  page_id=''  post_id=''  custom_url=''  text='<?php esc_attr_e('Sign in','real-estate-listings'); ?>'  icon_class='far fa-user'  icon_aria_label=''  link_type=''  link_size=''  link_bg='outline-light'  link_pt=''  link_pr=''  link_pb=''  link_pl=''  link_pt_md=''  link_pr_md=''  link_pb_md=''  link_pl_md=''  link_pt_lg=''  link_pr_lg=''  link_pb_lg=''  link_pl_lg=''  link_divider=''  text_color=''  text_justify='false'  text_align=''  text_align_md=''  text_align_lg=''  font_weight=''  mt=''  mr=''  mb=''  ml=''  mt_md=''  mr_md=''  mb_md=''  ml_md=''  mt_lg='0'  mr_lg=''  mb_lg='0'  ml_lg=''  pt=''  pr=''  pb=''  pl=''  pt_md=''  pr_md=''  pb_md=''  pl_md=''  pt_lg='0'  pr_lg='0'  pb_lg='0'  pl_lg='0'  border=''  rounded=''  rounded_size=''  shadow=''  visibility_conditions=''  css_class='' ]
-				<!-- /wp:blockstrap/blockstrap-widget-nav-item -->
-
-				<!-- wp:blockstrap/blockstrap-widget-nav-item {"type":"wp-logout","text":"<?php esc_attr_e('Sign out','real-estate-listings'); ?>","icon_class":"fas fa-sign-out-alt","link_bg":"outline-light","mt_lg":"0","mb_lg":"0","pt_lg":"0","pr_lg":"0","pb_lg":"0","pl_lg":"0","content":""} -->
-				[bs_nav_item type='wp-logout'  page_id=''  post_id=''  custom_url=''  text='<?php esc_attr_e('Sign out','real-estate-listings'); ?>'  icon_class='fas fa-sign-out-alt'  icon_aria_label=''  link_type=''  link_size=''  link_bg='outline-light'  link_pt=''  link_pr=''  link_pb=''  link_pl=''  link_pt_md=''  link_pr_md=''  link_pb_md=''  link_pl_md=''  link_pt_lg=''  link_pr_lg=''  link_pb_lg=''  link_pl_lg=''  link_divider=''  text_color=''  text_justify='false'  text_align=''  text_align_md=''  text_align_lg=''  font_weight=''  mt=''  mr=''  mb=''  ml=''  mt_md=''  mr_md=''  mb_md=''  ml_md=''  mt_lg='0'  mr_lg=''  mb_lg='0'  ml_lg=''  pt=''  pr=''  pb=''  pl=''  pt_md=''  pr_md=''  pb_md=''  pl_md=''  pt_lg='0'  pr_lg='0'  pb_lg='0'  pl_lg='0'  border=''  rounded=''  rounded_size=''  shadow=''  visibility_conditions=''  css_class='' ]
-				<!-- /wp:blockstrap/blockstrap-widget-nav-item -->
-
-				<?php
-			}
-			?>
-
-			<!-- wp:blockstrap/blockstrap-widget-nav-item {"type":"add_gd_place","text":"<?php esc_attr_e('Add listing','real-estate-listings'); ?>","icon_class":"fas fa-plus","link_type":"btn-round","link_size":"small","link_bg":"primary","text_align_lg":"text-lg-end","ml":"0","ml_md":"0","ml_lg":"3","pt_lg":"0","pr_lg":"0","pb_lg":"0","pl_lg":"0","content":""} -->
-			[bs_nav_item type='add_gd_place'  page_id=''  post_id=''  custom_url=''  text='<?php esc_attr_e('Add listing','real-estate-listings'); ?>'  icon_class='fas fa-plus'  icon_aria_label=''  link_type='btn-round'  link_size='small'  link_bg='primary'  link_pt=''  link_pr=''  link_pb=''  link_pl=''  link_pt_md=''  link_pr_md=''  link_pb_md=''  link_pl_md=''  link_pt_lg=''  link_pr_lg=''  link_pb_lg=''  link_pl_lg=''  link_divider=''  text_color=''  text_justify='false'  text_align=''  text_align_md=''  text_align_lg='text-lg-end'  font_weight=''  mt=''  mr=''  mb=''  ml='0'  mt_md=''  mr_md=''  mb_md=''  ml_md='0'  mt_lg=''  mr_lg=''  mb_lg=''  ml_lg='3'  pt=''  pr=''  pb=''  pl=''  pt_md=''  pr_md=''  pb_md=''  pl_md=''  pt_lg='0'  pr_lg='0'  pb_lg='0'  pl_lg='0'  border=''  rounded=''  rounded_size=''  shadow=''  visibility_conditions=''  css_class='' ]
-			<!-- /wp:blockstrap/blockstrap-widget-nav-item -->
-
-
-
-        </ul></div>[/bs_nav]
+		</ul></div>
 	<!-- /wp:blockstrap/blockstrap-widget-nav -->
 	<?php
 
 	return ob_get_clean();
 }
-add_filter( 'directory_pattern_menu_default', 'real_estate_theme_pattern_menu_default', 15 );
+
+
+function real_estate_listings_pattern_menu_wrapper( $content ) {
+	ob_start();
+
+	$home_url = get_home_url(); /* <?php echo esc_url( $home_url ); ?> */
+	?>
+	<!-- wp:blockstrap/blockstrap-widget-navbar-brand {"text":"\u003cspan class=\u0022text-primary\u0022\u003e\u003ci class=\u0022fas fa-home\u0022\u003e\u003c/i\u003e Real\u003c/span\u003eestate\u003c/span\u003e","img_max_width":150,"custom_url":"/","brand_font_size":"h4","brand_font_weight":"font-weight-bold","bg_gradient":"linear-gradient(135deg,rgb(34,227,7) 0%,rgb(245,245,245) 100%)","bg_on_text":true,"mb_lg":"1","pt_lg":"0","pr_lg":"0","pb_lg":"0","rounded_size":"lg","sd_shortcode":"[bs_navbar_brand text='\u003cspan class=\u0022text-primary\u0022\u003e\u003ci class=\u0022fas fa-home\u0022\u003e\u003c/i\u003e Real\u003c/span\u003eestate\u003c/span\u003e'  icon_image=''  img_max_width='150'  type='home'  custom_url='/'  text_color=''  brand_font_size='h4'  brand_font_weight='font-weight-bold'  brand_font_italic=''  text_justify='false'  text_align=''  text_align_md=''  text_align_lg=''  bg=''  bg_color='#0073aa'  bg_gradient='linear-gradient(135deg,rgb(34,227,7) 0%,rgb(245,245,245) 100%)'  bg_on_text='true'  mt=''  mr=''  mb=''  ml=''  mt_md=''  mr_md=''  mb_md=''  ml_md=''  mt_lg=''  mr_lg=''  mb_lg='1'  ml_lg=''  pt=''  pr=''  pb=''  pl=''  pt_md=''  pr_md=''  pb_md=''  pl_md=''  pt_lg='0'  pr_lg='0'  pb_lg='0'  pl_lg=''  border=''  rounded=''  rounded_size='lg'  shadow=''  css_class='' ]"} -->
+	<a class="navbar-brand d-flex align-items-center mb-1 pt-0 pe-0 pb-0 rounded-lg" href="<?php echo esc_url( $home_url ); ?>"><span class="mb-0 props.attributes.brand_font_size props.attributes.brand_font_weight props.attributes.brand_font_italic"><span class="text-primary"><i class="fas fa-home"></i> Real</span>estate</span></span></a>
+	<!-- /wp:blockstrap/blockstrap-widget-navbar-brand -->
+	<?php
+	echo real_estate_theme_get_default_menu(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	?>
+	<?php
+
+	return ob_get_clean();
+}
+add_filter( 'real_estate_listings_pattern_menu_wrapper', 'real_estate_listings_pattern_menu_wrapper', 15 );

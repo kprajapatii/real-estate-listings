@@ -26,6 +26,7 @@ if ( class_exists( 'BlockStrap_Admin' ) ) {
 				'blockstrap-page-builder-blocks' => esc_attr__( 'BlockStrap Builder', 'real-estate-listings' ),
 				'geodirectory' => esc_attr__( 'GeoDirectory', 'real-estate-listings' ),
 				'userswp' => esc_attr__( 'UsersWP', 'real-estate-listings' ),
+				'real-estate-directory' => esc_attr__( 'Real Estate Directory Blocks', 'real-estate-listings' ),
 			);
 		}
 

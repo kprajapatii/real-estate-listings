@@ -30,10 +30,6 @@ if ( function_exists( 'register_block_pattern' ) ) {
 <!-- /wp:group -->',
 		)
 	);
-}
-
-
-if ( function_exists( 'register_block_pattern' ) ) {
 
 	register_block_pattern(
 		'real-estate-listings/feature-home-default',
@@ -51,4 +47,17 @@ if ( function_exists( 'register_block_pattern' ) ) {
 		)
 	);
 
+	// menu wrapper
+	register_block_pattern(
+		'real-estate-listings/menu-wrapper',
+		array(
+			'title'      => esc_html__( 'Menu Wrapper', 'real-estate-listings' ),
+			'categories' => array( 'site-header' ),
+			'content'    => defined( 'BLOCKSTRAP_BLOCKS_VERSION' ) ? apply_filters(
+				'real_estate_listings_pattern_menu_wrapper',
+				'<!-- wp:site-title /-->'
+			) : '<!-- wp:site-title /-->',
+		)
+	);
 }
+

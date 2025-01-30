@@ -1,9 +1,9 @@
 === Real Estate Listings ===
 Contributors: ayecode, stiofansisland
-Tested up to: 6.5
+Tested up to: 6.7
 Requires at least: 6.1
 Requires PHP: 7.2
-Version: 2.0.8
+Version: 2.0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,11 @@ Real Estate is a unique theme concept, for WordPress.org. With Real Estate Theme
 Real Estate is a unique theme concept, for WordPress.org. With Real Estate Theme you can easily create an online real estate portal and submit your property listings. Real Estate utilises the power of the WordPress block editor, GeoDirectory and Bootstrap to be able to create a fast loading modern directory site.
 
 == Changelog ==
+
+= 2.0.9 - 2025-01-29 =
+* root index.php files removed as it could cause blank blog archive for some - FIXED
+* Templates updated to new template style - CHANGED
+* Header transparent and normal header template now share a menu so changes to one will affect both - CHANGED
 
 = 2.0.8 =
 * Some pattern templates not translatable - FIXED
