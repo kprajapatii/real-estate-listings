@@ -14,6 +14,10 @@ Real Estate Listings is a free WordPress block theme built specifically for real
 
 == Changelog ==
 
+= 2.0.15 - 2026-08-TBD =
+* Translations showing on archive pages where they should not - FIXED
+* Field for MLS ID now shows on listing page and archive page templates - ADDED
+
 = 2.0.14 - 2026-08-13 =
 * Some default templates fail to render without first saving the template page - FIXED
 
