@@ -3,7 +3,7 @@ Contributors: ayecode, stiofansisland
 Tested up to: 7.1
 Requires at least: 6.1
 Requires PHP: 7.2
-Version: 2.0.14
+Version: 2.0.15
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,7 +14,7 @@ Real Estate Listings is a free WordPress block theme built specifically for real
 
 == Changelog ==
 
-= 2.0.15 - 2026-08-TBD =
+= 2.0.15 - 2026-08-26 =
 * Translations showing on archive pages where they should not - FIXED
 * Field for MLS ID now shows on listing page and archive page templates - ADDED
 
